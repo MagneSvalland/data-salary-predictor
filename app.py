@@ -6,12 +6,12 @@ import joblib
 # Load trained model
 model = joblib.load("salary_model.pkl")
 
-st.set_page_config(page_title="💰 Data Science Salary Predictor", layout="centered")
+st.set_page_config(page_title=" Data Science Salary Predictor", layout="centered")
 
-st.title("💼 Data Science Salary Predictor")
-st.write("Enter job details to estimate the annual salary in USD 💵")
+st.title(" Data Science Salary Predictor")
+st.write("Enter job details to estimate the annual salary in USD ")
 
-# --- Sidebar ---
+# Sidebar
 st.sidebar.header("Job Information")
 
 # Friendly dropdowns
@@ -50,7 +50,7 @@ experience_level = experience_options[experience_label]
 employment_type = employment_options[employment_label]
 company_size = company_size_options[company_size_label]
 
-# --- Prepare data ---
+# Prepare data 
 input_data = pd.DataFrame({
     "work_year": [work_year],
     "experience_level": [experience_level],
@@ -62,11 +62,13 @@ input_data = pd.DataFrame({
     "company_size": [company_size]
 })
 
-# --- Predict ---
-if st.button("💰 Predict Salary"):
+# Predict 
+if st.button(" Predict Salary"):
     prediction = model.predict(input_data)[0]
-    st.success(f"💵 Estimated Salary: **${prediction:,.2f} USD**")
+    st.success(f" Estimated Salary: **${prediction:,.2f} USD**")
 
-# --- Footer ---
-st.markdown("---")
-st.caption("Built using Streamlit and scikit-learn | Dataset: Kaggle Data Science Job Salaries")
+# Footer
+st.caption(
+    "Predictions are most accurate for common roles like Data Scientist, Data Engineer, and Machine Learning Engineer. "
+    "Results may vary for rare job titles or less represented regions. "
+)
