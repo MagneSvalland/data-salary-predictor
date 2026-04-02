@@ -5,6 +5,9 @@ A machine learning web app that predicts data science salaries based on job titl
 ## Live Demo
 🔗 [data-salary-predictor.streamlit.app](https://data-salary-predictor-jhxtqv3oheyebml6npuumx.streamlit.app/)
 
+![Screenshot]<img width="1918" height="915" alt="image" src="https://github.com/user-attachments/assets/af6f3d3c-8fce-4c8f-b8cc-5cfffdd9018d" />
+
+
 ## Tech Stack
 - **Python** – data processing and model training
 - **Scikit-learn** – regression models
